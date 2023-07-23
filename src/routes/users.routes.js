@@ -2,8 +2,8 @@ const { Router } = require("express");
 const multer = require("multer");
 const uploadConfig = require("../configs/upload");
 
-const UsersControllers = require("../controllers/UsersController")
-const UserAvatarController = require("../controllers/UserAvatarController")
+const UsersControllers = require("../controllers/UsersController");
+const UserAvatarController = require("../controllers/UserAvatarController");
 const ensureAuthenticated = require("../middlewares/ensureAuthenticated");
 
 const usersRoutes = Router();
@@ -18,4 +18,4 @@ usersRoutes.patch("/avatar", ensureAuthenticated, upload.single("avatar"), userA
 
 
 
-module.exports = usersRoutes
+module.exports = usersRoutes;
