@@ -1,7 +1,10 @@
 const { hash, compare } = require("bcryptjs");
 const AppError = require("../utils/AppError");
 
+const UserRepository = require("../repositories/UserRepository");
 const sqliteConnection = require("../database/sqlite");
+
+const userRepository = new UserRepository();
 
 class UsersControllers {
   async create(request, response) {
